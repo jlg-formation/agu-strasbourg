@@ -1,8 +1,10 @@
+@import 'src/scss/variables';
+
 header {
     display: flex;
     align-items: center;
     background: #eee;
-    height: 3rem;
+    height: $header-height;
     padding-left: 1em;
     font-weight: bold;
     font-size: 1.4em;

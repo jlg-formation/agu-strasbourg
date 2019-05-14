@@ -1,7 +1,10 @@
+@import 'src/scss/variables';
+
+
 footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 3rem;
+    height: $header-height;
     background: #eee;
 }
