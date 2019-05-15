@@ -6,12 +6,16 @@ import { AppComponent } from './app.component';
 import { LayoutModule } from './layout/layout.module';
 import { HomeComponent } from './routes/home/home.component';
 import { CreateComponent } from './routes/create/create.component';
+import { ListComponent } from './routes/list/list.component';
+import { LegalComponent } from './routes/legal/legal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    CreateComponent
+    CreateComponent,
+    ListComponent,
+    LegalComponent
   ],
   imports: [
     BrowserModule,
