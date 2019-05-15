@@ -1,7 +1,6 @@
 @import 'src/scss/variables';
 
 main {
-    
-    height: calc(100% - #{$header-height * 2});
-    
+    display: block;
+    height: calc(100% - #{$header-height * 2}); 
 }
