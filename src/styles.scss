@@ -15,4 +15,7 @@ p {
 
 [routerLink], [ng-reflect-router-link] {
     cursor: pointer;
+    &[disabled] {
+        cursor: default;
+    }
 }
