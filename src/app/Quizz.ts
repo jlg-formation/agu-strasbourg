@@ -2,7 +2,15 @@ const MAP = 'quizzMap';
 
 export class Quizz {
 
-    constructor(private name: string) { }
+    static list(): Quizz[] {
+        if (!localStorage.getItem(MAP)) {
+            return [];
+        }
+        const quizzMap = JSON.parse(localStorage.getItem(MAP));
+        return Object.values(quizzMap);
+    }
+
+    constructor(public name: string) { }
 
     save() {
         try {
@@ -18,4 +26,6 @@ export class Quizz {
         }
 
     }
+
+
 }

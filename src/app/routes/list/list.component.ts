@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Quizz } from 'src/app/Quizz';
 
 @Component({
   selector: 'app-list',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListComponent implements OnInit {
 
+  quizzList: Quizz[];
+
   constructor() { }
 
   ngOnInit() {
+    this.quizzList = Quizz.list();
   }
 
 }
