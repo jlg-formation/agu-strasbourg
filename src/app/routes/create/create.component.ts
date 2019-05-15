@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-create',
@@ -7,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateComponent implements OnInit {
 
-  constructor() { }
+  constructor(private elt: ElementRef) { }
 
   ngOnInit() {
+    this.elt.nativeElement.querySelector('input[name=name]').focus();
   }
 
 }
