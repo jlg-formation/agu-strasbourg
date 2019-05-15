@@ -1,9 +1,10 @@
 @import 'src/scss/variables';
+
 div {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    height: 100%;
+    min-height: $minHeight;
     button {
         font-size: 1em;
         padding: 1em;

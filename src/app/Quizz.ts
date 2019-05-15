@@ -24,7 +24,6 @@ export class Quizz {
         } catch (e) {
             console.error(e);
         }
-
     }
 
 

@@ -1,0 +1,22 @@
+@import 'src/scss/variables';
+
+
+
+div {
+    display: flex;
+    min-height: $minHeight;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: center;
+    button {
+        display: flex;
+        min-width: 8em;
+        height: 8em;
+        background: #eee;
+        margin: 1em;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        padding: 1em;
+    }
+}
