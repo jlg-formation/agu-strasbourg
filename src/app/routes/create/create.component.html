@@ -4,5 +4,5 @@
     <div>Nom de quizz</div>
     <input type="text" name="name" formControlName="name">
   </label>
-  <button>Suivant</button>
+  <button [disabled]="f.invalid">Suivant</button>
 </form>

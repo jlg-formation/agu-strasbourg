@@ -1,5 +1,6 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Quizz } from 'src/app/Quizz';
 
 @Component({
   selector: 'app-create',
@@ -20,6 +21,8 @@ export class CreateComponent implements OnInit {
 
   submit() {
     console.log('submit');
+    const q = new Quizz(this.f.value.name);
+    q.save();
   }
 
 }
