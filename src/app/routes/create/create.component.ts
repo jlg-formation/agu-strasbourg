@@ -18,4 +18,8 @@ export class CreateComponent implements OnInit {
     this.elt.nativeElement.querySelector('input[name=name]').focus();
   }
 
+  submit() {
+    console.log('submit');
+  }
+
 }

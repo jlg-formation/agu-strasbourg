@@ -1,5 +1,5 @@
 
-<form [formGroup]="f">
+<form [formGroup]="f" (submit)="submit()">
   <label>
     <div>Nom de quizz</div>
     <input type="text" name="name" formControlName="name">
