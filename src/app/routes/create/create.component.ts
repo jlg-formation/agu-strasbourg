@@ -10,7 +10,7 @@ import { Quizz } from 'src/app/Quizz';
 export class CreateComponent implements OnInit {
 
   f = new FormGroup({
-    name: new FormControl('toto', Validators.required)
+    name: new FormControl('', Validators.required)
   });
 
   constructor(private elt: ElementRef) { }
