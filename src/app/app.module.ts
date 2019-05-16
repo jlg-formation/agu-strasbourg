@@ -10,6 +10,8 @@ import { CreateComponent } from './routes/create/create.component';
 import { ListComponent } from './routes/list/list.component';
 import { LegalComponent } from './routes/legal/legal.component';
 import { CreateQuestionsComponent } from './routes/create-questions/create-questions.component';
+import { SaveSuccessComponent } from './routes/save-success/save-success.component';
+import { AddQuestionComponent } from './routes/add-question/add-question.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { CreateQuestionsComponent } from './routes/create-questions/create-quest
     CreateComponent,
     ListComponent,
     LegalComponent,
-    CreateQuestionsComponent
+    CreateQuestionsComponent,
+    SaveSuccessComponent,
+    AddQuestionComponent
   ],
   imports: [
     BrowserModule,
