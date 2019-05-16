@@ -2,7 +2,7 @@
   <form [formGroup]="f">
     <label>
       <div>Entrer le texte de la question :</div>
-      <textarea rows="3"></textarea>
+      <textarea rows="3" formControlName="text"></textarea>
     </label>
     <br>
     <br>
@@ -11,26 +11,29 @@
     <div class="answers">
       <div class="input">
         <label>
-          <span>A</span> <input type="text">
+          <span>A</span> <input type="text" formControlName="answer1">
         </label>
         <label>
-          <span>B</span> <input type="text">
+          <span>B</span> <input type="text" formControlName="answer2">
         </label>
         <label>
-          <span>C</span> <input type="text">
+          <span>C</span> <input type="text" formControlName="answer3">
         </label>
         <label>
-          <span>D</span> <input type="text">
+          <span>D</span> <input type="text" formControlName="answer4">
         </label>
       </div>
       <div class="radio">
-        <input type="radio" name="answer">
-        <input type="radio" name="answer">
-        <input type="radio" name="answer">
-        <input type="radio" name="answer">
+        <input type="radio" value="A" formControlName="goodAnswer">
+        <input type="radio" value="B" formControlName="goodAnswer">
+        <input type="radio" value="C" formControlName="goodAnswer">
+        <input type="radio" value="D" formControlName="goodAnswer">
       </div>
     </div>
     <button>Annuler</button>
     <button>Ajouter la question</button>
   </form>
+</div>
+<div>
+  {{f.value | json}}
 </div>
