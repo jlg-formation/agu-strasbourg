@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-add-question',
@@ -17,9 +18,17 @@ export class AddQuestionComponent implements OnInit {
     goodAnswer: new FormControl('B', Validators.required),
   });
 
-  constructor() { }
+  constructor(private location: Location) { }
 
   ngOnInit() {
+  }
+
+  onSubmit() {
+    console.log('submit');
+  }
+
+  goBack() {
+    this.location.back();
   }
 
 }

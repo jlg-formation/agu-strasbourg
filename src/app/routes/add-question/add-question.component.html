@@ -1,5 +1,5 @@
 <div class="frame">
-  <form [formGroup]="f">
+  <form [formGroup]="f" (ngSubmit)="onSubmit()">
     <label>
       <div>Entrer le texte de la question :</div>
       <textarea rows="3" formControlName="text"></textarea>
@@ -30,7 +30,7 @@
         <input type="radio" value="D" formControlName="goodAnswer">
       </div>
     </div>
-    <button>Annuler</button>
+    <button type="button" (click)="goBack()">Annuler</button>
     <button>Ajouter la question</button>
   </form>
 </div>
