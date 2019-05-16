@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { QuizzService } from 'src/app/quizz.service';
+import { map } from 'rxjs/operators';
+import { Quizz } from 'src/app/Quizz';
 
 @Component({
   selector: 'app-execute',
@@ -7,9 +11,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExecuteComponent implements OnInit {
 
-  constructor() { }
+  q: Quizz;
+  constructor(private route: ActivatedRoute, private quizzService: QuizzService) { }
 
   ngOnInit() {
+    this.route.params.pipe(map(p => p.name)).subscribe(name => {
+      this.q = Object.values(Quizz.list()).find(q => q.name === name);
+    });
   }
 
 }
