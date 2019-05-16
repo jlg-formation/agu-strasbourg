@@ -1,0 +1,48 @@
+:host {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: inherit;
+}
+
+div.frame {
+    display: flex;
+    flex-direction: column;
+    width: 25em;
+    padding: 0.5em;
+    @media only screen and (max-width: 768px) {
+        width: 20em;
+    }
+    label {
+        textarea {
+            width: 100%;
+        }
+    }
+    .answers {
+        display: flex;
+        flex-direction: row;
+        label {
+            display: flex;
+            span {
+                display: inline-block;
+                width: 1.5em;
+            }
+           
+        }
+        .radio {
+            input {
+                display: block;
+                height: 1.5em;
+                margin-left: 1em;
+            }
+        }
+    }
+    button {
+        margin: 1em;
+        padding: 1em;
+        border: none;
+        @media only screen and (max-width: 768px) {
+            margin: 0.5em;
+        }
+    }
+}

@@ -1,3 +1,36 @@
-<p>
-  add-question works!
-</p>
+<div class="frame">
+  <form [formGroup]="f">
+    <label>
+      <div>Entrer le texte de la question :</div>
+      <textarea rows="3"></textarea>
+    </label>
+    <br>
+    <br>
+    <br>
+    <p>Entrer les 4 réponses</p>
+    <div class="answers">
+      <div class="input">
+        <label>
+          <span>A</span> <input type="text">
+        </label>
+        <label>
+          <span>B</span> <input type="text">
+        </label>
+        <label>
+          <span>C</span> <input type="text">
+        </label>
+        <label>
+          <span>D</span> <input type="text">
+        </label>
+      </div>
+      <div class="radio">
+        <input type="radio" name="answer">
+        <input type="radio" name="answer">
+        <input type="radio" name="answer">
+        <input type="radio" name="answer">
+      </div>
+    </div>
+    <button>Annuler</button>
+    <button>Ajouter la question</button>
+  </form>
+</div>
