@@ -9,6 +9,7 @@ import { HomeComponent } from './routes/home/home.component';
 import { CreateComponent } from './routes/create/create.component';
 import { ListComponent } from './routes/list/list.component';
 import { LegalComponent } from './routes/legal/legal.component';
+import { CreateQuestionsComponent } from './routes/create-questions/create-questions.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { LegalComponent } from './routes/legal/legal.component';
     HomeComponent,
     CreateComponent,
     ListComponent,
-    LegalComponent
+    LegalComponent,
+    CreateQuestionsComponent
   ],
   imports: [
     BrowserModule,

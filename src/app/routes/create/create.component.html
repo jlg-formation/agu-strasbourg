@@ -1,5 +1,5 @@
 
-<form [formGroup]="f" (submit)="submit()">
+<form [formGroup]="f" (ngSubmit)="submit()">
   <label>
     <div>Nom de quizz</div>
     <input type="text" name="name" formControlName="name" placeholder="ex: toto">
