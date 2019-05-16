@@ -16,7 +16,7 @@ const routes: Routes = [
   { path: 'add-question', component: AddQuestionComponent },
   { path: 'save', component: SaveSuccessComponent },
   { path: 'list', component: ListComponent },
-  { path: 'execute', component: ExecuteComponent },
+  { path: 'execute/:name', component: ExecuteComponent },
   { path: 'legal', component: LegalComponent },
 ];
 
