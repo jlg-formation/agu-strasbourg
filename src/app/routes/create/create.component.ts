@@ -3,6 +3,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Quizz } from 'src/app/Quizz';
 import { Router } from '@angular/router';
 import { routerNgProbeToken } from '@angular/router/src/router_module';
+import { QuizzService } from 'src/app/quizz.service';
 
 @Component({
   selector: 'app-create',
@@ -15,7 +16,11 @@ export class CreateComponent implements OnInit {
     name: new FormControl('', Validators.required)
   });
 
-  constructor(private elt: ElementRef, private router: Router) { }
+  constructor(
+    private elt: ElementRef,
+    private router: Router,
+    private quizzService: QuizzService
+  ) { }
 
   ngOnInit() {
     this.elt.nativeElement.querySelector('input[name=name]').focus();
@@ -25,6 +30,7 @@ export class CreateComponent implements OnInit {
     console.log('submit');
     const q = new Quizz(this.f.value.name);
     q.save();
+    this.quizzService.setCurrent(q);
     this.router.navigateByUrl('/create-questions');
   }
 

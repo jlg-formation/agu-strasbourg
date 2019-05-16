@@ -1,6 +1,11 @@
 const MAP = 'quizzMap';
 
+export interface Question {
+    text: string;
+}
+
 export class Quizz {
+    questions: Question[] = [];
 
     static list(): Quizz[] {
         if (!localStorage.getItem(MAP)) {
