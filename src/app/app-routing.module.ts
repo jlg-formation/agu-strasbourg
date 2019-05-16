@@ -7,6 +7,7 @@ import { LegalComponent } from './routes/legal/legal.component';
 import { CreateQuestionsComponent } from './routes/create-questions/create-questions.component';
 import { AddQuestionComponent } from './routes/add-question/add-question.component';
 import { SaveSuccessComponent } from './routes/save-success/save-success.component';
+import { ExecuteComponent } from './routes/execute/execute.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'add-question', component: AddQuestionComponent },
   { path: 'save', component: SaveSuccessComponent },
   { path: 'list', component: ListComponent },
+  { path: 'execute', component: ExecuteComponent },
   { path: 'legal', component: LegalComponent },
 ];
 

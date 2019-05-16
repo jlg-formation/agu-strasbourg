@@ -13,6 +13,7 @@ import { LegalComponent } from './routes/legal/legal.component';
 import { CreateQuestionsComponent } from './routes/create-questions/create-questions.component';
 import { SaveSuccessComponent } from './routes/save-success/save-success.component';
 import { AddQuestionComponent } from './routes/add-question/add-question.component';
+import { ExecuteComponent } from './routes/execute/execute.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { AddQuestionComponent } from './routes/add-question/add-question.compone
     LegalComponent,
     CreateQuestionsComponent,
     SaveSuccessComponent,
-    AddQuestionComponent
+    AddQuestionComponent,
+    ExecuteComponent
   ],
   imports: [
     BrowserModule,
