@@ -8,6 +8,7 @@ import { CreateQuestionsComponent } from './routes/create-questions/create-quest
 import { AddQuestionComponent } from './routes/add-question/add-question.component';
 import { SaveSuccessComponent } from './routes/save-success/save-success.component';
 import { ExecuteComponent } from './routes/execute/execute.component';
+import { SummaryComponent } from './routes/summary/summary.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'save', component: SaveSuccessComponent },
   { path: 'list', component: ListComponent },
   { path: 'execute/:name', component: ExecuteComponent },
+  { path: 'summary', component: SummaryComponent },
   { path: 'legal', component: LegalComponent },
 ];
 

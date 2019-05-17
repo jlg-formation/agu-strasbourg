@@ -14,6 +14,7 @@ import { CreateQuestionsComponent } from './routes/create-questions/create-quest
 import { SaveSuccessComponent } from './routes/save-success/save-success.component';
 import { AddQuestionComponent } from './routes/add-question/add-question.component';
 import { ExecuteComponent } from './routes/execute/execute.component';
+import { SummaryComponent } from './routes/summary/summary.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ExecuteComponent } from './routes/execute/execute.component';
     CreateQuestionsComponent,
     SaveSuccessComponent,
     AddQuestionComponent,
-    ExecuteComponent
+    ExecuteComponent,
+    SummaryComponent
   ],
   imports: [
     BrowserModule,
