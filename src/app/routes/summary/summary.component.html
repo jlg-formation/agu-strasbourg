@@ -1,7 +1,7 @@
 <div class="frame">
   <h1>Quizz {{q.name}}</h1>
   <fa-icon [icon]="faSmileWink"></fa-icon>
-  <p>Bravo !</p>
-  <p class="score">Votre score: {{quizzProgress.score}} / {{q.questions.length}}</p>
-  <button>Retour Accueil</button>
+  <p class="big">Bravo !</p>
+  <p class="score">Votre score: <strong>{{quizzProgress.score}} / {{q.questions.length}}</strong></p>
+  <button routerLink="/">Retour Accueil</button>
 </div>

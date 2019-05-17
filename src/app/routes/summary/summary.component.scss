@@ -1,0 +1,28 @@
+fa-icon {
+    font-size: 8em;
+}
+
+:host {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: inherit;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        p.big {
+            font-weight: bold;
+            font-size: 2em;
+            text-align: center;
+        }
+
+        p.score {
+            padding: 1em;
+        }
+
+    }
+}
