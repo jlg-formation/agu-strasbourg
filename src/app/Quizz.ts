@@ -1,4 +1,4 @@
-const MAP = 'quizzMap';
+export const MAP = 'quizzMap';
 
 export interface Question {
     text: string;
@@ -12,13 +12,7 @@ export interface Question {
 export class Quizz {
     questions: Question[] = [];
 
-    static list(): Quizz[] {
-        if (!localStorage.getItem(MAP)) {
-            return [];
-        }
-        const quizzMap = JSON.parse(localStorage.getItem(MAP));
-        return Object.values(quizzMap);
-    }
+
 
     constructor(public name: string) { }
 

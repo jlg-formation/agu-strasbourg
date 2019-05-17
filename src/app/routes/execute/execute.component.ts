@@ -23,8 +23,12 @@ export class ExecuteComponent implements OnInit {
     private quizzService: QuizzService) { }
 
   ngOnInit() {
-    this.route.params.pipe(map(p => p.name)).subscribe(name => {
-      this.q = Object.values(Quizz.list()).find(q => q.name === name);
+    this.route.params.pipe(map(p => {
+      console.log('p', p);
+      return p.name;
+    })).subscribe(name => {
+      this.q = Object.values(this.quizzService.list()).find(q => q.name === name);
+      console.log('this.q', this.q);
       this.quizzService.setCurrent(this.q);
       this.quizzProgress = this.quizzService.getQuizzProgress();
       this.f.reset();

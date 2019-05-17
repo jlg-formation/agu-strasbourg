@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Quizz } from 'src/app/Quizz';
+import { QuizzService } from 'src/app/quizz.service';
 
 @Component({
   selector: 'app-list',
@@ -10,10 +11,10 @@ export class ListComponent implements OnInit {
 
   quizzList: Quizz[];
 
-  constructor() { }
+  constructor(private quizzService: QuizzService) { }
 
   ngOnInit() {
-    this.quizzList = Quizz.list();
+    this.quizzList = this.quizzService.list();
   }
 
 }

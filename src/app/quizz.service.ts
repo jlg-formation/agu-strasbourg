@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Quizz } from './Quizz';
+import { Quizz, MAP } from './Quizz';
 
 export interface QuizzProgress {
   score: number;
@@ -10,10 +10,9 @@ export interface QuizzProgress {
   providedIn: 'root'
 })
 export class QuizzService {
-  
+
   current: Quizz;
   quizzProgress: QuizzProgress;
-  constructor() { }
 
   getCurrent(): Quizz {
     if (!this.current) {
@@ -22,7 +21,7 @@ export class QuizzService {
       this.current = new Quizz('');
       try {
         Object.assign(this.current, JSON.parse(localStorage.getItem('current')));
-      } catch (e) {}
+      } catch (e) { }
     }
     return this.current;
   }
@@ -42,6 +41,14 @@ export class QuizzService {
   resetQuizzProgress() {
     this.quizzProgress = undefined;
   }
+
+  list(): Quizz[] {
+    if (!localStorage.getItem(MAP)) {
+        return [];
+    }
+    const quizzMap = JSON.parse(localStorage.getItem(MAP));
+    return Object.values(quizzMap);
+}
 
 
 
