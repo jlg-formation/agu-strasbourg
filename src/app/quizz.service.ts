@@ -3,14 +3,16 @@ import { Quizz } from './Quizz';
 
 export interface QuizzProgress {
   score: number;
+  currentIndex: number;
 }
 
 @Injectable({
   providedIn: 'root'
 })
 export class QuizzService {
-
+  
   current: Quizz;
+  quizzProgress: QuizzProgress;
   constructor() { }
 
   getCurrent(): Quizz {
@@ -29,8 +31,16 @@ export class QuizzService {
   }
 
   getQuizzProgress(): QuizzProgress {
-    return { score: 12 };
+    if (!this.quizzProgress) {
+      this.quizzProgress = { score: 0, currentIndex: 0 };
+    }
+    return this.quizzProgress;
   }
+
+  resetQuizzProgress() {
+    this.quizzProgress = undefined;
+  }
+
 
 
 }

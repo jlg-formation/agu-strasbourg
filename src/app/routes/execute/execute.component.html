@@ -1,20 +1,20 @@
 <div class="frame">
   <h1>Quizz {{q.name}}</h1>
-  <h2>Question {{currentQuestionIndex + 1}} / {{q.questions.length}}</h2>
-  <div class="question">{{q.questions[currentQuestionIndex].text}}</div>
+  <h2>Question {{quizzProgress.currentIndex + 1}} / {{q.questions.length}}</h2>
+  <div class="question">{{q.questions[quizzProgress.currentIndex].text}}</div>
   <form [formGroup]="f" (ngSubmit)="submit()">
     <div class="answers">
       <label>
-        <input type="radio" value="A" formControlName="answer"><span>{{q.questions[currentQuestionIndex].answer1}}</span>
+        <input type="radio" value="A" formControlName="answer"><span>{{q.questions[quizzProgress.currentIndex].answer1}}</span>
       </label>
       <label>
-        <input type="radio" value="B" formControlName="answer"><span>{{q.questions[currentQuestionIndex].answer2}}</span>
+        <input type="radio" value="B" formControlName="answer"><span>{{q.questions[quizzProgress.currentIndex].answer2}}</span>
       </label>
       <label>
-        <input type="radio" value="C" formControlName="answer"><span>{{q.questions[currentQuestionIndex].answer3}}</span>
+        <input type="radio" value="C" formControlName="answer"><span>{{q.questions[quizzProgress.currentIndex].answer3}}</span>
       </label>
       <label>
-        <input type="radio" value="D" formControlName="answer"><span>{{q.questions[currentQuestionIndex].answer4}}</span>
+        <input type="radio" value="D" formControlName="answer"><span>{{q.questions[quizzProgress.currentIndex].answer4}}</span>
       </label>
     </div>
     <button [disabled]="f.invalid">Valider votre réponse</button>

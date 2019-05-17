@@ -18,6 +18,7 @@ export class SummaryComponent implements OnInit {
   ngOnInit() {
     this.q = this.quizzService.getCurrent();
     this.quizzProgress = this.quizzService.getQuizzProgress();
+    this.quizzService.resetQuizzProgress();
   }
 
 }

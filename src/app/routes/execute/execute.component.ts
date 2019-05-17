@@ -3,7 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { map } from 'rxjs/operators';
 import { Quizz } from 'src/app/Quizz';
-import { QuizzService } from 'src/app/quizz.service';
+import { QuizzService, QuizzProgress } from 'src/app/quizz.service';
 
 @Component({
   selector: 'app-execute',
@@ -13,7 +13,7 @@ import { QuizzService } from 'src/app/quizz.service';
 export class ExecuteComponent implements OnInit {
 
   q: Quizz;
-  currentQuestionIndex = 0;
+  quizzProgress: QuizzProgress;
   f = new FormGroup({
     answer: new FormControl(undefined, Validators.required)
   });
@@ -26,12 +26,21 @@ export class ExecuteComponent implements OnInit {
     this.route.params.pipe(map(p => p.name)).subscribe(name => {
       this.q = Object.values(Quizz.list()).find(q => q.name === name);
       this.quizzService.setCurrent(this.q);
+      this.quizzProgress = this.quizzService.getQuizzProgress();
+      this.f.reset();
     });
   }
 
   submit() {
     console.log('submit');
-    this.router.navigateByUrl('/summary');
+    if (this.f.value.answer === this.q.questions[this.quizzProgress.currentIndex].goodAnswer) {
+      this.quizzProgress.score++;
+    }
+    this.quizzProgress.currentIndex++;
+    this.f.reset();
+    if (this.quizzProgress.currentIndex === this.q.questions.length) {
+      this.router.navigateByUrl('/summary');
+    }
   }
 
 }
