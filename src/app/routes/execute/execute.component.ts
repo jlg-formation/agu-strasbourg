@@ -25,6 +25,7 @@ export class ExecuteComponent implements OnInit {
   ngOnInit() {
     this.route.params.pipe(map(p => p.name)).subscribe(name => {
       this.q = Object.values(Quizz.list()).find(q => q.name === name);
+      this.quizzService.setCurrent(this.q);
     });
   }
 

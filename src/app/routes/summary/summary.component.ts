@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Quizz } from 'src/app/Quizz';
+import { QuizzService } from 'src/app/quizz.service';
 
 @Component({
   selector: 'app-summary',
@@ -7,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SummaryComponent implements OnInit {
 
-  constructor() { }
+  q: Quizz;
+  constructor(private quizzService: QuizzService) { }
 
   ngOnInit() {
+    this.q = this.quizzService.getCurrent();
   }
 
 }
