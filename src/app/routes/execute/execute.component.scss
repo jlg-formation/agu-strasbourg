@@ -1,0 +1,22 @@
+@import 'src/scss/variables';
+
+:host {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-height: inherit;
+
+    label {
+        padding: 0.2em 0;
+        span {
+            padding-left: 1em;
+        }
+    }
+
+    .answers {
+        display: flex;
+        flex-direction: column;
+        padding: 1em 0;
+    }
+}
