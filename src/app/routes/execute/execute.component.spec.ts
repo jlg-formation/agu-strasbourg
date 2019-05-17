@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ExecuteComponent } from './execute.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('ExecuteComponent', () => {
   let component: ExecuteComponent;
@@ -8,9 +10,14 @@ describe('ExecuteComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ExecuteComponent ]
+      imports: [
+        ReactiveFormsModule,
+        RouterTestingModule.withRoutes([
+          { path: 'execute/:name', component: ExecuteComponent }
+        ])],
+      declarations: [ExecuteComponent],
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
