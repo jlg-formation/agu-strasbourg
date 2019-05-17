@@ -20,7 +20,9 @@ export class QuizzService {
       // this.current = JSON.parse(localStorage.getItem('current')) as Quizz;
       // Object.setPrototypeOf(this.current, Quizz.prototype);
       this.current = new Quizz('');
-      Object.assign(this.current, JSON.parse(localStorage.getItem('current')));
+      try {
+        Object.assign(this.current, JSON.parse(localStorage.getItem('current')));
+      } catch (e) {}
     }
     return this.current;
   }

@@ -8,8 +8,8 @@ import { QuizzService } from 'src/app/quizz.service';
   styleUrls: ['./create-questions.component.scss']
 })
 export class CreateQuestionsComponent implements OnInit {
-q: Quizz;
-  constructor(private quizzService: QuizzService) { 
+  q: Quizz;
+  constructor(private quizzService: QuizzService) {
     this.q = quizzService.getCurrent();
   }
 
