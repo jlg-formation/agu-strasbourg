@@ -1,10 +1,15 @@
 import { Injectable } from '@angular/core';
 import { Quizz } from './Quizz';
 
+export interface QuizzProgress {
+  score: number;
+}
+
 @Injectable({
   providedIn: 'root'
 })
 export class QuizzService {
+
   current: Quizz;
   constructor() { }
 
@@ -23,5 +28,9 @@ export class QuizzService {
     localStorage.setItem('current', JSON.stringify(this.current));
   }
 
-  
+  getQuizzProgress(): QuizzProgress {
+    return { score: 12 };
+  }
+
+
 }
