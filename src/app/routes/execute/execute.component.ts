@@ -12,6 +12,7 @@ import { Quizz } from 'src/app/Quizz';
 export class ExecuteComponent implements OnInit {
 
   q: Quizz;
+  currentQuestionIndex = 0;
   constructor(private route: ActivatedRoute, private quizzService: QuizzService) { }
 
   ngOnInit() {

@@ -2,6 +2,11 @@ const MAP = 'quizzMap';
 
 export interface Question {
     text: string;
+    answer1: string;
+    answer2: string;
+    answer3: string;
+    answer4: string;
+    goodAnswer: string;
 }
 
 export class Quizz {
