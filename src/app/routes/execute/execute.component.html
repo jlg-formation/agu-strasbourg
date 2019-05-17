@@ -1,6 +1,6 @@
 <div>
   <h1>Quizz {{q.name}}</h1>
-  <h2>Question {{currentQuestionIndex}}</h2>
+  <h2>Question {{currentQuestionIndex + 1}} / {{q.questions.length}}</h2>
   <div class="question">{{q.questions[currentQuestionIndex].text}}</div>
   <div class="answers">
     <label>
